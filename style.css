@@ -1,0 +1,413 @@
+:root {
+    color-scheme: dark;
+    --ink: #e9e4d8;
+    --muted: #a9b5b8;
+    --navy: #101c25;
+    --line: rgba(224, 214, 193, 0.16);
+    --accent: #d3a96c;
+    --accent-light: #efd4a7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+   /*Turns the background to a more navy-blue since the topic is about battleship. 
+   Makes it look more formal as anything navy-related is bound to include the color navy in it. 
+   */
+    margin: 0;
+    color: var(--ink);
+    background:
+        radial-gradient(ellipse at 50% 0, rgba(61, 93, 103, 0.35), transparent 52rem),
+        var(--navy);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.65;
+}
+
+p {
+    color: #ffffff;
+}
+
+.hero {
+    padding: 5.5rem 1.5rem 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(6, 14, 20, 0.58), transparent);
+}
+
+.eyebrow {
+    /*
+    Adds a golden text color on headings to make it look more get more attention. Makes website
+    look nicer as gold also looks good with navy. 
+    */
+    margin: 0 0 0.75rem;
+    color: var(--accent-light);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+    margin-top: 0;
+}
+
+h1,
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin: 0 auto 0.35rem;
+    font-size: clamp(2.4rem, 6vw, 4.8rem);
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+}
+
+.hero h2 {
+    margin: 0;
+    color: var(--accent-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 500;
+}
+
+.hero-copy {
+    max-width: 680px;
+    margin: 1.4rem auto 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.page-shell {
+    width: min(1120px, calc(100% - 2.5rem));
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.spec-grid {
+    /*
+    This organizes the information into separate cards to make it easier to read. The 
+    grid-template-columns makes 4 equal sized cards which hold information such as The Guns, 
+    propellors, hull, and crew,etc. 
+    */
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.spec-card,
+.visual-panel,
+.info-panel {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(23, 40, 51, 0.88);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+}
+
+.spec-card {
+    min-height: 205px;
+    padding: 1.4rem;
+}
+
+.card-number {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: var(--accent);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.spec-card h2 {
+    margin-bottom: 0.55rem;
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.spec-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.visual-panel,
+.info-panel {
+    margin-top: 1.5rem;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.section-heading {
+    margin-bottom: 1.2rem;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 0.3rem;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 1rem;
+}
+
+.image-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 240px;
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #0c151c;
+}
+
+.image-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    object-fit: cover;
+}
+
+.image-card-large img {
+    min-height: 340px;
+}
+
+.image-card figcaption {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 0.8rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    background: rgba(8, 17, 23, 0.8);
+    color: var(--ink);
+    font-size: 0.75rem;
+}
+
+.ship-quote {
+    display: block;
+    margin: 1.7rem 0 0.35rem;
+    color: var(--accent-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.2rem, 3vw, 1.65rem);
+    font-style: italic;
+    text-align: center;
+}
+
+.image-caption {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--muted);
+    text-align: center;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+}
+
+.styling {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.styling th,
+.styling td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.styling th {
+    color: var(--accent-light);
+    background: rgba(8, 18, 24, 0.42);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.styling td {
+    color: var(--ink);
+}
+
+.styling tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.record-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.record-footer h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+}
+
+.ship-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.ship-list dd {
+    margin: 0;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+button {
+    flex: 0 0 auto;
+    padding: 0.75rem 1.1rem;
+    border: 1px solid var(--accent);
+    border-radius: 7px;
+    background: var(--accent);
+    color: #17232a;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: var(--accent-light);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--accent-light);
+    outline-offset: 3px;
+}
+
+.page-footer {
+    padding: 1.8rem 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.page-footer a {
+    color: var(--accent-light);
+    font-weight: 600;
+    text-underline-offset: 0.2em;
+}
+
+.page-footer p {
+    margin: 0.65rem 0 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 650ms ease, transform 650ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*
+Makes the information smaller so people using devices such as a phone can read the information 
+clearly without worrying about it being cutoff or being too big for the user to read. @media
+*/
+@media (max-width: 900px) {
+    .spec-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .hero {
+        padding: 3.8rem 1.25rem 2.8rem;
+    }
+
+    .page-shell {
+        width: min(100% - 1.25rem, 520px);
+    }
+
+    .spec-grid,
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-card {
+        min-height: auto;
+    }
+
+    .image-card-large img,
+    .image-card img {
+        min-height: 220px;
+        max-height: 340px;
+    }
+
+    .record-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .record-footer button {
+        width: 100%;
+    }
+
+    .styling th,
+    .styling td {
+        padding: 0.7rem 0.55rem;
+        font-size: 0.82rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    button,
+    .reveal {
+        transition: none;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}

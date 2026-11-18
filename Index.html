@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Strongest Battleships of WWII</title>
+    <meta name="description" content="Explore the Bismarck and Yamato, two of the most famous battleships of World War II.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+    Combined the header and the introduction to make it look nicer as well as starting with a more clearer introduction. 
+    -->
+    <header class="hero">
+        <p class="eyebrow">WWII NAVAL HISTORY</p>
+        <h1 id="title" class="change">The Strongest Battleships of WWII</h1>
+        <h2 id="title2">The Bismarck</h2>
+        <p id="description" class="hero-copy">The Bismarck was Germany's first and lead ship of the Bismarck class. Ships in the same class share a common design, though individual details may differ.</p>
+    </header>
+
+    <main class="page-shell">
+        <section class="spec-grid" aria-label="Ship specifications">
+            <article class="spec-card">
+                <span class="card-number">01</span>
+                <h2 class="change">The Guns</h2>
+                <p id="guns">Eight 38 cm (15-inch) main guns were arranged in four twin turrets. Secondary guns and anti-aircraft weapons provided additional defense.</p>
+            </article>
+            <article class="spec-card">
+                <span class="card-number">02</span>
+                <h2 class="change">The Hull</h2>
+                <p id="hull">The Bismarck displaced about 50,000 tonnes at full load. Its armor belt reached up to 320 mm in thickness, protecting vital areas of the ship.</p>
+            </article>
+            <article class="spec-card">
+                <span class="card-number">03</span>
+                <h2>The Propellers</h2>
+                <p id="propellors">Three propeller shafts powered the ship, helping it reach speeds of about 30 knots in ideal conditions.</p>
+            </article>
+            <article class="spec-card">
+                <span class="card-number">04</span>
+                <h2 class="change">The Crew</h2>
+                <p id="staff">A crew of roughly 2,200 officers and enlisted sailors operated the ship and its many weapons and systems.</p>
+            </article>
+        </section>
+
+        <section class="visual-panel" aria-label="Ship photographs">
+            <div class="section-heading">
+                <p class="eyebrow">ON THE WATER</p>
+                <h2>Built for open seas</h2>
+            </div>
+            <!--
+            Groups the images into a gallery and adds comments beneath them to explain the image 
+            as well as providing extra information about the ship. 
+            -->
+            <div class="image-grid">
+                <figure class="image-card image-card-large">
+                    <img id="bigShip" src="Bismarck.png" alt="The German battleship Bismarck at sea">
+                    <figcaption>At sea</figcaption>
+                </figure>
+                <figure class="image-card">
+                    <img id="gun2" src="Guns.png" alt="The Bismarck's main guns">
+                    <figcaption>Armament</figcaption>
+                </figure>
+            </div>
+            <q id="versatility" class="ship-quote">A powerful silhouette, designed to command the horizon.</q>
+            <p id="pics" class="image-caption">The Bismarck combined a heavily armored hull with a formidable main battery, making it one of the most notable battleships of the war.</p>
+        </section>
+
+        <section id="info-section" class="ship info-panel">
+            <div class="section-heading">
+                <p class="eyebrow">AT A GLANCE</p>
+                <h2>Ship record</h2>
+            </div>
+            <div class="table-wrap">
+                <table class="styling">
+                    <!--Organizes the ship's information into a table with columns for the 
+                    ship, belt armor, as well as its fate.-->
+                    <thead>
+                        <tr>
+                            <th scope="col">Ship</th>
+                            <th scope="col">Belt armor</th>
+                            <th scope="col">Fate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="ship">Bismarck</td>
+                            <td id="hull2">Up to 320 mm</td>
+                            <td id="status">Sunk May 27, 1941</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="record-footer">
+                <div>
+                    <h3 id="sunk">Ships engaged by the Bismarck</h3>
+                    <dl class="ship-list">
+                        <dt class="visually-hidden">Ships engaged by the Bismarck</dt>
+                        <dd id="sunk2">HMS Hood — sunk</dd>
+                        <dd id="sunk3">HMS Prince of Wales — damaged</dd>
+                    </dl>
+                </div>
+                <button id="myBtn" type="button">Yamato Info</button>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <a id="link" href="https://www.britannica.com/topic/Bismarck-German-ship" target="_blank" rel="noopener noreferrer">Learn more about the Bismarck</a>
+            <p>Historical specifications are approximate and can vary by source.</p>
+        </footer>
+    </main>
+    <script src="Script.js"></script>
+</body>
+</html>
